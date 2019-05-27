@@ -26,7 +26,7 @@
       require_once '../app/controllers/'. $this->currentController .'.php';
 
       // Instantiate controller class
-      $this->currencController = new $this->currentController;
+      $this->currentController = new $this->currentController;
 
       // Check for second part of url
       if(isset($url[1])){
@@ -42,7 +42,7 @@
       $this->params = $url ? array_values($url) : [];
 
       // Call a callback with array of params
-      call_user_func_array([$this->currencController,
+      call_user_func_array([$this->currentController,
       $this->currentMethod], $this->params);
     }
 

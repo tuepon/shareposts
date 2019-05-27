@@ -110,8 +110,6 @@
           $this->view('users/login', $data);
         }
 
-
-
       } else {
         // Init data
         $data = [
